@@ -4,6 +4,8 @@ import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
 import { WebBadge } from '@/components/web-badge';
 import { BottomTabInset, MaxContentWidth, Spacing } from '@/constants/theme';
+import { Device, Platform } from 'react-native';
+import { SafeAreaView, StyleSheet } from 'react-native';
 
 function getDevMenuHint() {
   if (Platform.OS === 'web') {
@@ -31,7 +33,7 @@ export default function HomeScreen() {
         <ThemedView style={styles.heroSection}>
           <AnimatedIcon />
           <ThemedText type="title" style={styles.title}>
-            Welcome to&nbsp;Expo
+         welcome to Expo Router
           </ThemedText>
         </ThemedView>
 

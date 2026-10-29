@@ -1,13 +1,13 @@
 import {
-  Tabs,
   TabList,
-  TabTrigger,
-  TabSlot,
-  TabTriggerSlotProps,
   TabListProps,
+  Tabs,
+  TabSlot,
+  TabTrigger,
+  TabTriggerSlotProps,
 } from 'expo-router/ui';
 import { SymbolView } from 'expo-symbols';
-import { Pressable, useColorScheme, View, StyleSheet } from 'react-native';
+import { Pressable, StyleSheet, useColorScheme, View } from 'react-native';
 
 import { ExternalLink } from './external-link';
 import { ThemedText } from './themed-text';
@@ -25,13 +25,20 @@ export default function AppTabs() {
             <TabButton>Home</TabButton>
           </TabTrigger>
           <TabTrigger name="explore" href="/explore" asChild>
-             <TabTrigger name="bhaskara" href="/explore" asChild></TabTrigger>
-             <TabTrigger name="pitagoras" href="/explore" asChild></TabTrigger>
             <TabButton>Explore</TabButton>
+          </TabTrigger>
+          <TabTrigger name="calculadora" href ="/calculadora" asChild>
+            <TabButton>Calculadora</TabButton>
+          </TabTrigger>
+          <TabTrigger name="bhaskara" href="/calculadora/bhaskara" asChild>
+            <TabButton>Bhaskara</TabButton>
+          </TabTrigger>
+          <TabTrigger name="pitagoras" href="/calculadora/pitagoras" asChild>
+            <TabButton>Pitagoras</TabButton>
           </TabTrigger>
         </CustomTabList>
       </TabList>
-    </Tabs>
+    </Tabs >
   );
 }
 
